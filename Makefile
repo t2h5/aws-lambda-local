@@ -1,6 +1,6 @@
-.PHONY: run
+.PHONY: build run
 
-runtime := python3.8
+runtime = python3.8
 
 build:
 	docker run --rm -v $(PWD):/var/task lambci/lambda:build-$(runtime) pip install -U -r requirements.txt -t ./lib
